@@ -46,5 +46,6 @@ jobs:
                 git checkout --track origin/main
                 git pull origin main
                 git merge --allow-unrelated-histories alteracoes
+                git commit -m "Merge with conflict resolution"
                 git push origin main
             fi
