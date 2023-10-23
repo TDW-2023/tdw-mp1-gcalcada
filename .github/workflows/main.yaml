@@ -42,7 +42,7 @@ jobs:
             if [[ ${{ needs.lint.result }} == 'success' ]]; then
                 git fetch
                 git checkout --track origin/main
-                git pull 
-                git merge origin alteracoes/main
+                git pull origin main
+                git merge alteracoes
                 git push origin main
             fi
