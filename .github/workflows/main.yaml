@@ -43,6 +43,6 @@ jobs:
                 git fetch
                 git checkout --track origin/main
                 git pull origin main
-                git merge alteracoes
+                git merge --allow-unrelated-histories alteracoes
                 git push origin main
             fi
