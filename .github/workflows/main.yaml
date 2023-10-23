@@ -40,5 +40,6 @@ jobs:
           run: |          
             if: needs.lint.result == 'success'
               git checkout main
+              git pull 
               git merge alteracoes
               git push origin main
