@@ -49,23 +49,3 @@ jobs:
                  echo "Não existem alterações a serem feitas"
                 fi
             fi
-
-
-jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Check out code
-      uses: actions/checkout@v4
-
-    - name: Install Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: 16
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run Lint
-      run: npm run lint
-
