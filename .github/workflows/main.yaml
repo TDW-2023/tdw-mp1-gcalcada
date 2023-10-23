@@ -44,8 +44,8 @@ jobs:
                 git config user.name "gcalcadaMctw"
                 git fetch
                 git checkout --track origin/main
-                git pull origin main
-                git merge --allow-unrelated-histories alteracoes
+                git pull origin main https://github.com/TDW-2023/tdw-mp1-gcalcada/tree/main
+                git merge --allow-unrelated-histories alteracoes https://github.com/TDW-2023/tdw-mp1-gcalcada.git/alteracoes
                 git commit -m "Resolver Conflitos"
-                git push origin main
+                git push origin main https://github.com/TDW-2023/tdw-mp1-gcalcada/tree/main
             fi
