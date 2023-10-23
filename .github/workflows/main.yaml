@@ -43,7 +43,7 @@ jobs:
        - name: Verifica alterações caso a verificação de erros de codigo tenha passado
          run: |
             if [[ ${{ needs.lint.result }} == 'success' ]]; then
-            if git log main..HEAD; then
+            if git log alteracoes..HEAD; then
                  echo "Existem alterações a serem feitas caso queiras fazer deves fazer manualmente"
                 else
                  echo "Não existem alterações a serem feitas"
