@@ -39,8 +39,9 @@ jobs:
           uses: actions/checkout@v4
         - name: Merge to Main
           run: |          
-            if: needs.lint.result == 'success'
+            if [[ ${{ needs.lint.result }} == 'success' ]]; then
               git checkout main
               git pull 
               git merge alteracoes
               git push origin main
+            fi
