@@ -40,6 +40,8 @@ jobs:
         - name: Merge to Main
           run: |          
             if [[ ${{ needs.lint.result }} == 'success' ]]; then
+                git config user.email "gcalcada7@ua.pt"
+                git config user.name "gcalcadaMctw"
                 git fetch
                 git checkout --track origin/main
                 git pull origin main
