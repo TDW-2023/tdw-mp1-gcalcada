@@ -44,15 +44,8 @@ jobs:
                 git config user.name "gcalcadaMctw"
                 git fetch
                 git checkout --track origin/main
-                git add .github/workflows/main.yaml
-                git commit -m "Conflit Main.yml"
-                git add components/alert.js
-                git commit -m "Conflit alert.js"
-                git pull origin main
-                git add components/lib/api.js
-                git commit -m "Conflit lib/api.js"
                 git pull origin main
                 git merge --allow-unrelated-histories alteracoes
-                git commit -m "Merge with conflict resolution"
+                git commit -m "Resolver Conflitos"
                 git push origin main
             fi
