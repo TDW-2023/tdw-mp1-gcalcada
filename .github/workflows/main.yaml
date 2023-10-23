@@ -31,21 +31,21 @@ jobs:
     - name: Run Lint
       run: npm run lint
 
-  merge_to_main:
+  
+  check-merges:
     runs-on: ubuntu-latest
     needs: lint
     steps:
-        - name: Check out code
-          uses: actions/checkout@v4
-        - name: Merge to Main
-          run: |          
+       - name: Check for Pending Merges
+         uses: actions/checkout@v2
+         with:
+          ref: main
+       - name: Verifica alterações caso a verificação de erros de codigo tenha passado
+         run: |
             if [[ ${{ needs.lint.result }} == 'success' ]]; then
-                git config user.email "gcalcada7@ua.pt"
-                git config user.name "gcalcadaMctw"
-                git fetch
-                git checkout --track origin/main
-                git pull origin main https://github.com/TDW-2023/tdw-mp1-gcalcada/tree/main
-                git merge --allow-unrelated-histories alteracoes https://github.com/TDW-2023/tdw-mp1-gcalcada.git/alteracoes
-                git commit -m "Resolver Conflitos"
-                git push origin main https://github.com/TDW-2023/tdw-mp1-gcalcada/tree/main
+            if git log main..HEAD; then
+                 echo "Existem alterações a serem feitas caso queiras fazer deves fazer manualmente"
+                else
+                 echo "Não existem alterações a serem feitas"
+                fi
             fi
