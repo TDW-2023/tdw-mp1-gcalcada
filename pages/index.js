@@ -8,6 +8,7 @@ import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
 import Link from "next/link";
 
+
 export default function Index({ preview, allPosts }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
@@ -18,11 +19,8 @@ export default function Index({ preview, allPosts }) {
           <title>Next.js Blog Example with {CMS_NAME}</title>
         </Head>
         <Container>
-          <Link href="/posts/post-1">Ir para o post 1</Link>
 
-          <Link href="/posts/post-2">Ir para o post 2</Link>
 
-          <Link href="/posts/post-3">Ir para o post 2</Link>
           <Intro />
           {heroPost && (
             <HeroPost
@@ -46,4 +44,7 @@ export async function getStaticProps({ preview = false }) {
   return {
     props: { preview, allPosts },
   };
+
+
+
 }
