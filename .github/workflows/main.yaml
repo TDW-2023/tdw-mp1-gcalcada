@@ -15,9 +15,9 @@ jobs:
         node-version: 16
     - name: Secrets API Key
       run:   
-        export CONTENTFUL_ACCESS_TOKEN=${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
-        export CONTENTFUL_SPACE_ID=${{ secrets.CONTENTFUL_SPACE_ID }}
-        export API_KEY=${{ secrets.API_KEY }}
+        CONTENTFUL_ACCESS_TOKEN=${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+        CONTENTFUL_SPACE_ID=${{ secrets.CONTENTFUL_SPACE_ID }}
+        API_KEY=${{ secrets.API_KEY }}
         echo "Variáveis de ambiente definidas:"
         echo "CONTENTFUL_ACCESS_TOKEN=$CONTENTFUL_ACCESS_TOKEN"
         echo "CONTENTFUL_SPACE_ID=$CONTENTFUL_SPACE_ID"
