@@ -23,9 +23,12 @@ jobs:
     needs: secret_key_step
     runs-on: ubuntu-latest
     steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+    - name: Install Dependencies
+      run:  npm install
     - name: Run Prettier
       run: |
-       npm install
        npm run prettier
        working-directory: .
   
@@ -33,11 +36,14 @@ jobs:
     needs: secret_key_step
     runs-on: ubuntu-latest 
     steps:
-    - name: Run Jest Verify Js
+    - name: Check out code
+      uses: actions/checkout@v2
+    - name: Install Dependencies
+      run:  npm install
+    - name: Jest Run final
       run: |
-       npm install
-       npm run test 
-       working-directory: .
+          npm run test 
+          working-directory: .
 
 
   lint:
