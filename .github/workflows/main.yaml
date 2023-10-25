@@ -14,10 +14,10 @@ jobs:
       with:
         node-version: 16
     - name: Secrets API Key
-      run: |
-        export CONTENTFUL_ACCESS_TOKEN="${{ secrets.CONTENTFUL_ACCESS_TOKEN }}"
-        export CONTENTFUL_SPACE_ID="${{ secrets. CONTENTFUL_SPACE_ID }}"
-        export API_KEY= ${{ secrets.API_KEY }}
+      run: 
+        export CONTENTFUL_ACCESS_TOKEN=${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+        export CONTENTFUL_SPACE_ID=${{ secrets. CONTENTFUL_SPACE_ID }}
+        export API_KEY=${{ secrets.API_KEY }}
 
 
   prettier:
