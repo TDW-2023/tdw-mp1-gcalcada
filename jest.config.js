@@ -1,3 +1,8 @@
 module.exports = {
-    testarcomlint: ['**/__posts__/**/*.js', '/__components__/**/*.js'],
+    testPathIgnorePatterns: [
+        '/node_modules/',
+        '/.next/'
+    ],
+    modulePaths: ['<rootDir>', 'contentful', 'pages'],
+
 };
