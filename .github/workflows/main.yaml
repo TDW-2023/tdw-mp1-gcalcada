@@ -26,10 +26,10 @@ prettier:
       run:  npm install
     - name: Install and Run Prettier
       run: |
+         
+         npm install prettier --save-dev
 
-       npm install prettier --save-dev
-
-       npm run prettier 
+         npm run prettier 
       
   
   jest: 
