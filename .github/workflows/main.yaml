@@ -20,16 +20,56 @@ jobs:
     - name: Install Dependencies
       run: npm install
         
-    - name: Corre prettier 
-      run: npm run prettier
+  prettier:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Set up Node.js
+          uses: actions/setup-node@v2
+          with:
+            node-version: 16
     
-  
-  
-    - name: Corre jest 
-      run: npm run test
-    - name: Corre lint
-      run: npm run lint
-   
+        - name: Check out code
+          uses: actions/checkout@v2
+    
+        - name: Install Dependencies
+          run: npm install
+    
+        - name: Corre Prettier
+          run: npm run prettier
+    
+  jest:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Set up Node.js
+          uses: actions/setup-node@v2
+          with:
+            node-version: 16
+    
+        - name: Check out code
+          uses: actions/checkout@v2
+    
+        - name: Install Dependencies
+          run: npm install
+    
+        - name: Corre Jest
+          run: npm run test
+    
+  lint:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Set up Node.js
+          uses: actions/setup-node@v2
+          with:
+            node-version: 16
+    
+        - name: Check out code
+          uses: actions/checkout@v2
+    
+        - name: Install Dependencies
+          run: npm install
+    
+        - name: Corre Lint
+          run: npm run lint
     
     
     
