@@ -1,8 +1,8 @@
 const jogadoresDeFutebol = [
-    { nome: "Cristiano Ronaldo", idade: 36, clube: "Manchester United" },
-    { nome: "Lionel Messi", idade: 34, clube: "Paris Saint-Germain" },
-    { nome: "Neymar Jr.", idade: 29, clube: "Paris Saint-Germain" },
-    { nome: "Kylian Mbappé", idade: 22, clube: "Paris Saint-Germain" },
+    { nome: "Cristiano Ronaldo", idade: 38, clube: "Arabes Milionarios" },
+    { nome: "Lionel Messi", idade: 37, clube: "Barcelona" },
+    { nome: "Neymar Jr.", idade: 32, clube: "Paris Saint-Germain" },
+    { nome: "Kylian Mbappé", idade: 24, clube: "Fc Porto" },
     { nome: "Robert Lewandowski", idade: 33, clube: "Bayern Munich" },
 ];
 
