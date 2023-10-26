@@ -1,0 +1,27 @@
+name: deploy and push
+
+on:
+  push:
+    branches:
+      - alteracoes
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+      CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Deploy
+        run: npm run deploy
