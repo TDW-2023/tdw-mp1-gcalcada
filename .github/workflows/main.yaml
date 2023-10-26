@@ -28,14 +28,14 @@ jobs:
           run: npm run prettier
     
   jest:
-        needs: prettier
+        needs: build
         runs-on: ubuntu-latest
         steps:
         - name: Run Jest
           run: npm run test
     
   lint:
-        needs: jest
+        needs: build
         runs-on: ubuntu-latest
         steps:
         - name: Run lint
