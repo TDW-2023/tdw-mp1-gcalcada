@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 import React from 'react';
 export default function RichTextAsset({ id, assets }) {
   const asset = assets?.find((asset) => asset.sys.id === id);

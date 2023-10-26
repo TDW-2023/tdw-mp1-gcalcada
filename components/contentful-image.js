@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 import React from 'react';
 const contentfulLoader = ({ src, width, quality }) => {
   return `${src}?w=${width}&q=${quality || 75}`;

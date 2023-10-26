@@ -5,6 +5,6 @@
 @tailwind utilities;
 
 .active {
-    background-color: #ff0000; /* Substitua pela cor desejada */
-    /* Outros estilos */
-  }
+  background-color: #ff0000; /* Substitua pela cor desejada */
+  /* Outros estilos */
+}

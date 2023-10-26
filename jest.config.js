@@ -1,10 +1,5 @@
 module.exports = {
-    testPathIgnorePatterns: [
-        '/node_modules/',
-        '/.next/'
-    ],
+  testPathIgnorePatterns: ['/node_modules/', '/.next/'],
 
-    testMatch: ['**/components/**/*.test.js'],
-
-
+  testMatch: ['**/components/**/*.test.js'],
 };
