@@ -20,11 +20,11 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
-    - name: Install and Run Prettier
+    - name:  correr prettier
       run: npm run prettier
 
-    - name: Install Jest and Run Tests
+    - name: correr o jest 
       run: npm run test
 
-    - name: Run Lint
+    - name: correr o lint
       run: npm run lint
