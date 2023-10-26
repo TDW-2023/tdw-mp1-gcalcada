@@ -20,27 +20,27 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
-  prettier:
-        needs: build
-        runs-on: ubuntu-latest
-        steps:
-        - name: Run Prettier
-          run: npm run prettier
+  prettier:  
+      needs: build
+      runs-on: ubuntu-latest
+      steps:
+      - name: Corre prettier 
+        run: npm run prettier
     
-  jest:
-        needs: build
-        runs-on: ubuntu-latest
-        steps:
-        - name: Run Jest
+  jest:  
+      needs: build
+      runs-on: ubuntu-latest
+      steps:
+        - name: Corre jest 
           run: npm run test
-    
-  lint:
-        needs: build
-        runs-on: ubuntu-latest
-        steps:
-        - name: Run lint
-          run: npm run lint
-   
+  
+  lint:  
+       needs: build
+       runs-on: ubuntu-latest
+       steps:
+         - name: Corre lint 
+           run: npm run lint
+ 
     
     
     
