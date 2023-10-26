@@ -3,6 +3,8 @@ module.exports = {
         '/node_modules/',
         '/.next/'
     ],
-    modulePaths: ['<rootDir>', 'contentful', 'pages'],
+
+    testMatch: ['**/components/**/*.test.js'],
+
 
 };
