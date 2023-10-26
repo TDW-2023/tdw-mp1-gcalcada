@@ -12,7 +12,7 @@ import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import { CMS_NAME } from "../../lib/constants";
 import getConfig from "next/config";
-
+import React from 'react';
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
   const { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } = getConfig();

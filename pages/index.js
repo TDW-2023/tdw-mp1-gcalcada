@@ -7,7 +7,7 @@ import { getAllPostsForHome } from "../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
 import Link from "next/link";
-
+import React from 'react';
 
 export default function Index({ preview, allPosts }) {
   const heroPost = allPosts[0];
@@ -22,6 +22,7 @@ export default function Index({ preview, allPosts }) {
 
 
           <Intro />
+
           {heroPost && (
             <HeroPost
               title={heroPost.title}
