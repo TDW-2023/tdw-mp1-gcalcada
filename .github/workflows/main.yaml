@@ -16,24 +16,19 @@ jobs:
 
 prettier:
   
-    needs: secret_key_step
-
     runs-on: ubuntu-latest
     steps:
-    - name: Check out code
-      uses: actions/checkout@v2
-    - name: Install Dependencies
-      run:  npm install
-    - name: Install and Run Prettier
-      run: |
-         
-         npm install prettier --save-dev
-
-         npm run prettier 
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        run:  npm install
+      - name: Install and Run Prettier
+        run: |
+            npm install prettier --save-dev
+            npm run prettier 
       
   
-  jest: 
-    needs: secret_key_step
+jest: 
     runs-on: ubuntu-latest 
     steps:
     - name: Check out code
