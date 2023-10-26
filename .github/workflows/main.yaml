@@ -14,8 +14,8 @@ jobs:
           node-version: 16
 
 
-
-  prettier:
+prettier:
+  
     needs: secret_key_step
 
     runs-on: ubuntu-latest
@@ -33,6 +33,7 @@ jobs:
       
   
   jest: 
+    needs: secret_key_step
     runs-on: ubuntu-latest 
     steps:
     - name: Check out code
@@ -49,6 +50,7 @@ jobs:
 
 
   lint:
+    needs: secret_key_step
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
