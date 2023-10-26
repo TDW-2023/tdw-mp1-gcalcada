@@ -28,9 +28,8 @@ jobs:
     - name: Install Dependencies
       run:  npm install
     - name: Run Prettier
-      run: |
-       npm run prettier
-       working-directory: .
+      run:  npm run prettier
+      
   
   jest: 
     needs: secret_key_step
@@ -41,9 +40,8 @@ jobs:
     - name: Install Dependencies
       run:  npm install
     - name: Jest Run final
-      run: |
-          npm run test 
-          working-directory: .
+      run:  npm run test 
+    
 
 
   lint:
