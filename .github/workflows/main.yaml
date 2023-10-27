@@ -3,7 +3,8 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - alteracoes
+     - main
+
 
 jobs:
   build:
@@ -28,3 +29,18 @@ jobs:
         
       - name: Run lint
         run: npm run lint
+        
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: success()
+    steps:
+      - name: Set up environment variables
+        run: |
+          echo "NETLIFY_SITE_ID=1bd90679-afab-4942-9258-3049b7bd2a23" >> $GITHUB_ENV
+          
+          echo "NETLIFY_AUTH_TOKEN=5h9G80shIPFPjgnE_fE_5apjtfbGqEl5Gao7PNGzBCI" >> $GITHUB_ENV
+                                  
+      - name: Deploy to Netlify
+        run: npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN--prod
+          
