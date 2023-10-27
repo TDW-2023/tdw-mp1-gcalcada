@@ -45,9 +45,9 @@ jobs:
 
       - name: Set up environment variables
         run: |
-          echo "NETLIFY_SITE_ID=1bd90679-afab-4942-9258-3049b7bd2a23" >> $GITHUB_ENV
+          echo "NETLIFY_SITE_ID=03d719e0-dd10-486a-a454-a7459c6c2cc7" >> $GITHUB_ENV
           
-          echo "NETLIFY_AUTH_TOKEN=5h9G80shIPFPjgnE_fE_5apjtfbGqEl5Gao7PNGzBCI" >> $GITHUB_ENV
+          echo "NETLIFY_AUTH_TOKEN=EDwDOH7R4myTba9EH_JHqt9CRpngmpjLE8nVy3jffGg" >> $GITHUB_ENV
                                   
       - name: Deploy to Netlify
         run: npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod 
