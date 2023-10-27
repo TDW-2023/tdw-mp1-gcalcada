@@ -35,5 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy
-        run: |
-             npx netlify-cli deploy --auth $NETLIFY_AUTH_TOKEN --prod
+        run: npx netlify-cli deploy --prod
+        env:
+           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
