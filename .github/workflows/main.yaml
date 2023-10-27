@@ -42,10 +42,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
          node-version: 16
-  
-      - name: Link to the site
-        run: npx netlify-cli link    
 
       - name: Deploy to Netlify
-        run: npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod 
+        run: npx netlify-cli deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --prod 
           
