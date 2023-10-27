@@ -5,6 +5,8 @@ on:
     branches:
      - main
 
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   build:
@@ -34,6 +36,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+
+
       - name: GITHUB
         run: |
           echo "NETLIFY_SITE_ID=7cec9023-7650-4285-9d8f-967ae74b3269" >> $GITHUB_ENV
