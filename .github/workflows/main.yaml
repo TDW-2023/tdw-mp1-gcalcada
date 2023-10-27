@@ -42,16 +42,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
          node-version: 16
-
-      - name: GITHUB
-        run: |
-          echo "NETLIFY_SITE_ID=03d719e0-dd10-486a-a454-a7459c6c2cc7" >> $GITHUB_ENV
-          
-          echo "NETLIFY_AUTH_TOKEN=EDwDOH7R4myTba9EH_JHqt9CRpngmpjLE8nVy3jffGg" >> $GITHUB_ENV
-        
+  
       - name: Link to the site
         run: npx netlify-cli link    
-        
+
       - name: Deploy to Netlify
         run: npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod 
           
