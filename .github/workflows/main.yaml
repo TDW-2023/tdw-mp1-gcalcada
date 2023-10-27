@@ -16,7 +16,7 @@ jobs:
           node-version: 16
 
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Install Dependencies
         run: npm install
@@ -35,6 +35,14 @@ jobs:
     runs-on: ubuntu-latest
     if: success()
     steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+         node-version: 16
+
+      - name: Check out code
+        uses: actions/checkout@v4
+
       - name: Set up environment variables
         run: |
           echo "NETLIFY_SITE_ID=1bd90679-afab-4942-9258-3049b7bd2a23" >> $GITHUB_ENV
@@ -42,5 +50,5 @@ jobs:
           echo "NETLIFY_AUTH_TOKEN=5h9G80shIPFPjgnE_fE_5apjtfbGqEl5Gao7PNGzBCI" >> $GITHUB_ENV
                                   
       - name: Deploy to Netlify
-        run: npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod --debug
+        run: npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod 
           
