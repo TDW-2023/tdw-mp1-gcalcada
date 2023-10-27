@@ -33,7 +33,6 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    if: success()
     steps:
       - name: Check out code
         uses: actions/checkout@v4
@@ -42,12 +41,14 @@ jobs:
         uses: actions/setup-node@v2
         with:
          node-version: 16
+     
+      - name: Install Dependencies
+        run: npm install
 
       - name: Deploy to Netlify
+        env: 
+         key1:  ${{ secrets.NETLIFY_SITE_ID }}
+         key2: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: |
-          npm install
-          npm run build
-          npx netlify-cli deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --prod
-        env:
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          npx netlify-cli deploy --site "$env:key1" --auth "$env:key2" --prod
+      
