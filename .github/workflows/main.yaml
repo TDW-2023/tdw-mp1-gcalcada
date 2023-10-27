@@ -50,5 +50,5 @@ jobs:
           echo "NETLIFY_AUTH_TOKEN=EDwDOH7R4myTba9EH_JHqt9CRpngmpjLE8nVy3jffGg" >> $GITHUB_ENV
                                   
       - name: Deploy to Netlify
-        run: npx netlify-cli deploy --site 03d719e0-dd10-486a-a454-a7459c6c2cc7 --auth EDwDOH7R4myTba9EH_JHqt9CRpngmpjLE8nVy3jffGg --prod 
+        run: npx netlify-cli deploy --site gcalcada-mp1 --auth EDwDOH7R4myTba9EH_JHqt9CRpngmpjLE8nVy3jffGg --prod 
           
