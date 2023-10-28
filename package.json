@@ -20,6 +20,7 @@
     "postcss": "^8.4.31",
     "react": "latest",
     "react-dom": "latest",
+    "netlify-cli": "^16.9.2",
     "word-wrap": "^1.2.4"
   },
   "devDependencies": {
