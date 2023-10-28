@@ -31,18 +31,27 @@ jobs:
         
       - name: Run lint
         run: npm run lint
+
+      - name: BUILD
+        run: npm run build
         
   deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
+     - name: Checkout código
+       uses: actions/checkout@v4
 
+     - name: Setup Node.js
+       uses: actions/setup-node@v2
+       with:
+         node-version: 16
 
-      - name: GITHUB
-        run: |
+     - name: GITHUB
+       run: |
           echo "NETLIFY_SITE_ID=7cec9023-7650-4285-9d8f-967ae74b3269" >> $GITHUB_ENV
           echo "NETLIFY_AUTH_TOKEN=PfCbkGmbSzfgnuyhW4jbALt6zmRdHUr4rA4MgXd5E0I" >> $GITHUB_ENV
 
-      - name: Deploy to Netlify
-        run: npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
+     - name: Deploy to Netlify
+       run: npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
 
