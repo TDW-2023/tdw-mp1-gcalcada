@@ -44,7 +44,7 @@ jobs:
        uses: actions/setup-node@v2
        with:
          node-version: 16
-
+asda
      - name: GITHUB
        run: |
           echo "NETLIFY_SITE_ID=7cec9023-7650-4285-9d8f-967ae74b3269" >> $GITHUB_ENV
