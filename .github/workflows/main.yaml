@@ -62,6 +62,6 @@ jobs:
           exit 1
           fi
           if [[ ${{ job.status }} = 'success' ]]; then
-          echo "Depois de verificar o job deploy foi validado com sucesso..."
+          echo "Depois de verificar o job deploys foi validado com sucesso..."
           exit 0
           fi
