@@ -1,3 +1,20 @@
 {
-	"siteId": "7cec9023-7650-4285-9d8f-967ae74b3269"
+	"siteId": "7cec9023-7650-4285-9d8f-967ae74b3269",
+	"geolocation": {
+		"data": {
+			"city": "Coimbra",
+			"country": {
+				"code": "PT",
+				"name": "Portugal"
+			},
+			"subdivision": {
+				"code": "06",
+				"name": "Coimbra"
+			},
+			"timezone": "Europe/Lisbon",
+			"latitude": 40.2057,
+			"longitude": -8.4213
+		},
+		"timestamp": 1698451723895
+	}
 }
