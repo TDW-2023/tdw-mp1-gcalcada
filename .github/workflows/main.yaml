@@ -44,6 +44,11 @@ jobs:
        with:
          node-version: 16
 
+     - name: GITHUB
+       run: |
+          echo "NETLIFY_SITE_ID=7cec9023-7650-4285-9d8f-967ae74b3269" >> $GITHUB_ENV
+          echo "NETLIFY_AUTH_TOKEN=PfCbkGmbSzfgnuyhW4jbALt6zmRdHUr4rA4MgXd5E0I" >> $GITHUB_ENV
+
      - name: Deploy to Netlify
        run: npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
 
