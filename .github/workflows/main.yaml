@@ -54,8 +54,7 @@ jobs:
    
   deploy_check:
     runs-on: ubuntu-latest
-    needs:
-        - deploy
+    needs: deploy
     steps:
      - name: Verify Deploy Job
        run: |
