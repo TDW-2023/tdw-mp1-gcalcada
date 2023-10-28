@@ -1,5 +1,3 @@
 [build] 
    publish = "out"
 
-[dev]
-framework = "next"
