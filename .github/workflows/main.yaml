@@ -51,17 +51,3 @@ jobs:
      - name: Deploy to Netlify
        run: npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
    
-  deploy_check:
-    needs: deploy
-    runs-on: ubuntu-latest
-    steps:
-     - name: Verify Deploy Job
-       run: |
-          if [[ ${{ job.status }} != 'success' ]]; then
-          echo "Depois de verificar o job deploy lamentamos mas falhou"
-          exit 1
-          fi
-          if [[ ${{ job.status }} = 'success' ]]; then
-          echo "Depois de verificar o job deploy foi validado com sucesso..."
-          exit 0
-          fi
