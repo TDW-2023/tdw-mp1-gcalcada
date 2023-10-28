@@ -2,7 +2,7 @@ import Container from './container';
 import cn from 'classnames';
 import { EXAMPLE_PATH } from '../lib/constants';
 import Link from 'next/link';
-import React from 'react';
+
 export default function Alert({ preview }) {
   return (
     <div

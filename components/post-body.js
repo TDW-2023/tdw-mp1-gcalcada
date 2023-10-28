@@ -2,7 +2,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types';
 import markdownStyles from './markdown-styles.module.css';
 import RichTextAsset from './rich-text-asset';
-import React from 'react';
+
 const customMarkdownOptions = (content) => ({
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: (node) => (

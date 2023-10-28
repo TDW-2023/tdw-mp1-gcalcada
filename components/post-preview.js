@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Avatar from '../components/avatar';
 import DateComponent from '../components/date';
 import CoverImage from './cover-image';
-import React from 'react';
+
 export default function PostPreview({
   title,
   coverImage,
