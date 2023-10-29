@@ -31,9 +31,9 @@ jobs:
       - name: Deploy and check to Netlify
         run: |
               if npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod; then
-              echo "O deploy com sucesso"
+              echo "O deploy com sucesso" > deploy_log.txt
               else
-              echo "O deploy falhou."
+              echo "O deploy falhou." > deploy_log.txt
               exit 1
               fi 
 
